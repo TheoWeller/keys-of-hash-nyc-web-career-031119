@@ -3,7 +3,9 @@ require 'pry'
 class Hash
   def keys_of(*arguments)
   new_arr = []
-    
+    my_hash = each_key do |x|
+      print "#{x}"
+    end
     arguments.each do |argument|
       my_hash.each do |key, value|
         if value == argument
